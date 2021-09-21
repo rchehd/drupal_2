@@ -4,8 +4,7 @@
  */
 function pets_owners_form_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   if($form_id == 'search_block_form') {
-    $form['keys']['#description'] = t('Enter some text to search');
-    $form['keys']['#size']=25;
+    $form['#prefix'] = t('Enter some text to search');
   }
 
 }
